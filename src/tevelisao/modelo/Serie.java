@@ -40,6 +40,6 @@ public class Serie extends Title{
 
     @Override
     public int getScreentimeInMinutes() {
-        return seasons * episodes * averageEPTime / 60;
+        return seasons * episodes * averageEPTime ;
     }
 }

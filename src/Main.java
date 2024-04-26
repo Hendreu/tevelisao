@@ -25,7 +25,7 @@ public class Main {
         lost.setSeasons(10);
         lost.setEpisodes(10);
         lost.setAverageEPTime(30);
-        System.out.println("Lost tem: " + lost.getScreentimeInMinutes() + " horas");
+        System.out.println("Lost tem: " + lost.getScreentimeInMinutes() + " minutos");
 
         Movie outroMovie = new Movie();
         outroMovie.setTitle("avatar");
@@ -36,6 +36,7 @@ public class Main {
         TimeCalculator calculator = new TimeCalculator();
         calculator.includes(myMovie);
         calculator.includes(outroMovie);
+        calculator.includes(lost);
         System.out.println(calculator.getTotalTime());
     }
 }

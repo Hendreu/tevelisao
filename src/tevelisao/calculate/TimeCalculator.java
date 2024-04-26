@@ -1,6 +1,5 @@
 package tevelisao.calculate;
-
-import tevelisao.modelo.Movie;
+import tevelisao.modelo.Title;
 
 public class TimeCalculator {
     private int totalTime = 0;
@@ -8,7 +7,8 @@ public class TimeCalculator {
     public int getTotalTime() {
         return totalTime;
     }
-    public void includes(Movie m){
-        totalTime += m.getScreentimeInMinutes();
+
+    public void includes(Title title){
+        this.totalTime += title.getScreentimeInMinutes();
     }
 }
