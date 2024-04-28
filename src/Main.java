@@ -1,6 +1,9 @@
+import tevelisao.calculate.RecomedationFilter;
 import tevelisao.calculate.TimeCalculator;
+import tevelisao.modelo.Episode;
 import tevelisao.modelo.Movie;
 import tevelisao.modelo.Serie;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +41,14 @@ public class Main {
         calculator.includes(outroMovie);
         calculator.includes(lost);
         System.out.println(calculator.getTotalTime());
+
+        RecomedationFilter filter = new RecomedationFilter();
+        filter.filter(myMovie);
+
+        Episode episode = new Episode();
+        Episode.setNumber(1);
+        Episode.setSerie(lost);
+        Episode.setTotalViews(500);
+        filter.filter(episode);
     }
 }
