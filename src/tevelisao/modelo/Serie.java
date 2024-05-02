@@ -1,6 +1,6 @@
 package tevelisao.modelo;
 
-public class Serie extends Title{
+public class Serie extends Title {
     private int seasons;
     private boolean active;
     private int episodes;
@@ -40,6 +40,11 @@ public class Serie extends Title{
 
     @Override
     public int getScreentimeInMinutes() {
-        return seasons * episodes * averageEPTime ;
+        return seasons * episodes * averageEPTime;
+    }
+
+    // Método para calcular o tempo total de visualização de uma série
+    public int getTotalWatchTime() {
+        return getScreentimeInMinutes();
     }
 }
