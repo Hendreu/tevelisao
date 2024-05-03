@@ -16,8 +16,16 @@ public class Title {
         this.title = title;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public void setLaunchDate(int launchDate) {
         this.launchDate = launchDate;
+    }
+
+    public int getLaunchDate() {
+        return launchDate;
     }
 
     public void setCoveredOnTheSubPlan(boolean coveredOnTheSubPlan) {

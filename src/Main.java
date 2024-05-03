@@ -4,6 +4,8 @@ import tevelisao.modelo.Episode;
 import tevelisao.modelo.Movie;
 import tevelisao.modelo.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         // Criação e configuração do objeto Movie
@@ -63,10 +65,17 @@ public class Main {
 
         var dogville = new Movie();
         dogville.setTitle("Dogville");
-        dogville.setLaunchDate("2003");
-        dogville.setScreentimeInMinutes("200");
+        dogville.setLaunchDate(2003);
+        dogville.setScreentimeInMinutes(200);
         dogville.rating(10);
-        
+
+        ArrayList<Movie> moviesList = new ArrayList<>();
+        moviesList.add(dogville);
+        moviesList.add(theGodfather);
+        moviesList.add(avatar);
+        System.out.println("Tamanho da lista " + moviesList.size());
+        System.out.println("Primeiro filme " + moviesList.get(0).getTitle());
+        System.out.println(moviesList);
 
     }
 }
