@@ -8,6 +8,11 @@ public class Title {
     private int rate;
     private int screentimeInMinutes;
 
+    public Title(String title, int launchDate) {
+        this.title = title;
+        this.launchDate = launchDate;
+    }
+
     public int getRate(){ //get (permite eu pegar o valor previamente dito e nao permite futuras alterações)
         return rate;
     }
@@ -41,16 +46,15 @@ public class Title {
     }
 
     public void showData() {
-        System.out.println("Nome do Filme: " + title);
-        System.out.println("Ano de lançamento: " + launchDate);
+        // System.out.println("Nome do Filme: " + title);
+        // System.out.println("Ano de lançamento: " + launchDate);
     }
 
     public void rating(double rated) {
         rating += rated;
-        rate++;
+        rate ++ ;
     }
     public double showRating(){
         return  rating / rate;
     }
 }
-

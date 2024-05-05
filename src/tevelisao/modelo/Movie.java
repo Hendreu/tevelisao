@@ -4,6 +4,10 @@ import tevelisao.calculate.Classificate;
 public class Movie extends Title implements Classificate {
     private String diretor;
 
+    public Movie(String title, int launchDate) {
+        super(title, launchDate);
+    }
+
     public String getDiretor() {
         return diretor;
     }
@@ -14,7 +18,7 @@ public class Movie extends Title implements Classificate {
 
     @Override
     public int getClassification() {
-        return (int) getRate() / 2;
+        return (int) getRate() / 2 ;
     }
 
     @Override

@@ -6,6 +6,10 @@ public class Serie extends Title {
     private int episodes;
     private int averageEPTime;
 
+    public Serie(String title, int launchDate) {
+        super(title, launchDate);
+    }
+
     public void setSeasons(int seasons) {
         this.seasons = seasons;
     }
