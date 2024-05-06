@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Lost tem " + lost.getScreentimeInMinutes() + " minutos");
 
         // Criação e configuração do avatar
-        Movie avatar = new Movie("avatar", 2023);
+        Movie avatar = new Movie("Avatar", 2023);
         avatar.setTitle("avatar");
         avatar.setScreentimeInMinutes(1000);
 

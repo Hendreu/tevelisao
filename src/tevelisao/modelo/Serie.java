@@ -51,4 +51,9 @@ public class Serie extends Title {
     public int getTotalWatchTime() {
         return getScreentimeInMinutes();
     }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getTitle() + "(" + this.getLaunchDate() +")";
+    }
 }

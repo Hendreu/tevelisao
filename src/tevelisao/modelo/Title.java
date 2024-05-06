@@ -1,6 +1,6 @@
 package tevelisao.modelo;
 
-public class Title {
+public class Title implements Comparable<Title> {
     private String title; //todo atributo precisa ser privado
     private int launchDate;
     private boolean coveredOnTheSubPlan;
@@ -56,5 +56,10 @@ public class Title {
     }
     public double showRating(){
         return  rating / rate;
+    }
+
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getTitle().compareTo(otherTitle.getTitle());
     }
 }

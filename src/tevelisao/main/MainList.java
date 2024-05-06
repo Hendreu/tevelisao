@@ -3,10 +3,13 @@ import tevelisao.modelo.Movie;
 import tevelisao.modelo.Serie;
 import tevelisao.modelo.Title;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainList {
     public static void main(String[] args) {
-        Serie lost = new Serie("lost", 2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.rating(6);
 
         Movie theGodfather = new Movie("O poderoso chefão", 1970);
@@ -19,7 +22,7 @@ public class MainList {
         dogville.rating(6);
         dogville.rating(6);
 
-        Movie avatar = new Movie("avatar", 2023);
+        Movie avatar = new Movie("Avatar", 2023);
         avatar.rating(9);
         avatar.rating(9);
         avatar.rating(9);
@@ -33,9 +36,22 @@ public class MainList {
 
         for (Title item: watchList){
             System.out.println(item.getTitle());
-            Movie movie = (Movie) item;
-            System.out.println("Nota: "+ movie.showRating());
-
+            if (item instanceof Movie movie && movie.showRating() > 2){
+                System.out.println("Nota: "+ movie.showRating());
+            }
         }
+
+        ArrayList<String> searchForArtist = new ArrayList<>();
+        searchForArtist.add("Adam Sandler");
+        searchForArtist.add("matheus");
+        searchForArtist.add("george");
+        System.out.println(searchForArtist);
+
+        Collections.sort(searchForArtist);
+        System.out.println(searchForArtist);
+        Collections.sort(watchList);
+        System.out.println(watchList);
+        watchList.sort(Comparator.comparing(Title::getLaunchDate));
+        System.out.println(watchList);
     }
 }
